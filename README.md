@@ -19,3 +19,13 @@ Thank you all for your attention. For more details, please refer to our [Project
 
 Code and weights will be released.
 
+## Reference
+
+@artical{wang2024animatelcm,
+      title={AnimateLCM: Accelerating the Animation of Personalized Diffusion Models and Adapters with Decoupled Consistency Learning}, 
+      author={Fu-Yun Wang and Zhaoyang Huang and Xiaoyu Shi and Weikang Bian and Guanglu Song and Yu Liu and Hongsheng Li},
+      year={2024},
+      eprint={2402.00769},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
