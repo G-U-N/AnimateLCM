@@ -10,12 +10,12 @@ https://github.com/G-U-N/AnimateLCM/assets/60997859/b5e5c928-6cf0-47b8-a2db-4340
 
 Thank you all for your attention. For more details, please refer to our [Project Page](https://animatelcm.github.io/) and [Hugging Face Demo 🤗](https://huggingface.co/spaces/wangfuyun/AnimateLCM).
 
-🎉 Check the advanced developpment of community: [ComfyUI-AnimateLCM](https://github.com/dezi-ai/ComfyUI-AnimateLCM) and [ComfyUI-AnimateDiff-Evolved](https://www.reddit.com/r/comfyui/comments/1ajjp9v/animatelcm_support_just_dropped/).
 
 <div align="left">
     <img src="./__assets__/gradio.png" alt="Description of Image" width="800px"/>
 </div>
 
+🎉 Check the advanced developpment of community: [ComfyUI-AnimateLCM](https://github.com/dezi-ai/ComfyUI-AnimateLCM) and [ComfyUI-AnimateDiff-Evolved](https://www.reddit.com/r/comfyui/comments/1ajjp9v/animatelcm_support_just_dropped/).
 
 
 
