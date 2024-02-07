@@ -15,7 +15,7 @@ Thank you all for your attention. For more details, please refer to our [Project
     <img src="./__assets__/gradio.png" alt="Description of Image" width="800px"/>
 </div>
 
-🎉 Check the advanced developpment of community: [ComfyUI-AnimateLCM](https://github.com/dezi-ai/ComfyUI-AnimateLCM) and [ComfyUI-AnimateDiff-Evolved](https://www.reddit.com/r/comfyui/comments/1ajjp9v/animatelcm_support_just_dropped/).
+🎉 Check the advanced developpment of community: [ComfyUI-AnimateLCM](https://github.com/dezi-ai/ComfyUI-AnimateLCM) and [ComfyUI-Reddit](https://www.reddit.com/r/comfyui/comments/1ajjp9v/animatelcm_support_just_dropped/).
 
 
 
