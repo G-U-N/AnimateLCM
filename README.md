@@ -44,7 +44,7 @@ export_to_gif(frames, "animatelcm.gif")
 
 🎉 Check the advanced developpment of community: [ComfyUI-AnimateLCM](https://github.com/dezi-ai/ComfyUI-AnimateLCM) and [ComfyUI-Reddit](https://www.reddit.com/r/comfyui/comments/1ajjp9v/animatelcm_support_just_dropped/).
 
-
+🎉 Awesomw Workflow for AnimateLCM: [Tutorial](https://youtu.be/HxlZHsd6xAk).
 
 More code and weights will be released.
 
