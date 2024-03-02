@@ -11,6 +11,7 @@ https://github.com/G-U-N/AnimateLCM/assets/60997859/b5e5c928-6cf0-47b8-a2db-4340
 Thank you all for your attention. For more details, please refer to our [Project Page](https://animatelcm.github.io/) and [Hugging Face Demo 🤗](https://huggingface.co/spaces/wangfuyun/AnimateLCM).
 
 
+Non-cherry pick demo with our long video work.
 
 https://github.com/G-U-N/AnimateLCM/assets/60997859/2011e3f3-709c-4f9e-9d41-e3259f220673
 
@@ -62,5 +63,11 @@ More code and weights will be released.
       eprint={2402.00769},
       archivePrefix={arXiv},
       primaryClass={cs.CV}
+}
+@article{wang2023gen,
+  title={Gen-L-Video: Multi-Text to Long Video Generation via Temporal Co-Denoising},
+  author={Wang, Fu-Yun and Chen, Wenshuo and Song, Guanglu and Ye, Han-Jia and Liu, Yu and Li, Hongsheng},
+  journal={arXiv preprint arXiv:2305.18264},
+  year={2023}
 }
 ```
