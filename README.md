@@ -10,7 +10,7 @@ https://github.com/G-U-N/AnimateLCM/assets/60997859/b5e5c928-6cf0-47b8-a2db-4340
 
 Thank you all for your attention. For more details, please refer to our [Project Page](https://animatelcm.github.io/) and [Hugging Face Demo 🤗](https://huggingface.co/spaces/wangfuyun/AnimateLCM).
 
-Video edited by AnimateLCM in 5 minutes, find the original video in [X](https://twitter.com/billpeeb/status/1764074070688088341):
+Video edited by AnimateLCM in 5 minutes with 1280x720p, find the original video in [X](https://twitter.com/billpeeb/status/1764074070688088341):
 
 Prompt: "green alien, red eyes"
 
