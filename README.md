@@ -3,6 +3,7 @@
 [AnimateLCM: Accelerating the Animation of Personalized Diffusion Models and Adapters with Decoupled Consistency Learning](https://arxiv.org/abs/2402.00769)
 
 
+> planning to train a v2 version, but not sdxl version (which is too costy for me). Code is expected to release when finishing.
 
 https://github.com/G-U-N/AnimateLCM/assets/60997859/b5e5c928-6cf0-47b8-a2db-4340d49a7c31
 
