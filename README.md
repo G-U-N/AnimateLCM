@@ -56,6 +56,9 @@ Currently, We release three models for usage
 
 - [AnimateLCM-I2V](https://huggingface.co/wangfuyun/AnimateLCM-I2V). A spatial LoRA weight and a motion module with an additional image encoder for personalized image animation. It is our trying to directly train a image animation models for fast sampling without any teacher models. It can generate animations with a personalized image with 2~4 steps. Yet due to the training resources is very limited, it is not that stable as I would expect (Similar to most I2V models built on Stable-Diffusion-v1-5, not very stable for generation).
 
+### Install & Usage Instruction
+
+We split the animatelcm_sd15 and animatelcm_svd into two folders. They are based on different enviroments. Please refer to [README_animatelcm_sd15](./animatelcm_sd15/README.md) and [README_animatelcm_svd](./animatelcm_svd/README.md) for instructions.
  
 ### Usage Tips
 
