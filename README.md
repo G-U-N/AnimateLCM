@@ -1,81 +1,107 @@
-# AnimateLCM
+<div align="center">
 
-[AnimateLCM: Accelerating the Animation of Personalized Diffusion Models and Adapters with Decoupled Consistency Learning](https://arxiv.org/abs/2402.00769)
+## ⚡️AnimateLCM: Accelerating the Animation of Your Personalized Models and Adapters through Decoupled Consistency Learning
 
+[[Paper]](https://arxiv.org/abs/2402.00769) [[Project Page ✨]](https://animatelcm.github.io/) [[Demo in 🤗Hugging Face]](https://huggingface.co/spaces/wangfuyun/AnimateLCM-SVD) [[Pre-trained Models]](https://huggingface.co/wangfuyun/AnimateLCM) [[Civitai]](https://civitai.com/models/290375/animatelcm-fast-video-generation)
 
-> planning to train a v2 version, but not sdxl version (which is too costy for me). Code is expected to release when finishing.
+by *[Fu-Yun Wang](https://g-u-n.github.io), Zhaoyang Huang📮, Xiaoyu Shi, Weikang Bian, Guanglu Song, Yu Liu, Hongsheng Li📮* 
 
-https://github.com/G-U-N/AnimateLCM/assets/60997859/b5e5c928-6cf0-47b8-a2db-4340d49a7c31
-
-
-
-Thank you all for your attention. For more details, please refer to our [Project Page](https://animatelcm.github.io/) and [Hugging Face Demo 🤗](https://huggingface.co/spaces/wangfuyun/AnimateLCM).
-
-Video edited by AnimateLCM in 5 minutes with 1280x720p, find the original video in [X](https://twitter.com/billpeeb/status/1764074070688088341):
-
-Prompt: "green alien, red eyes"
-
-https://github.com/G-U-N/AnimateLCM/assets/60997859/6ca39742-92af-4552-9101-e6f5049a2a02
+</div>
 
 
 
-Non-cherry pick demo with our long video work.
+If you use any components of our work, please cite it.
 
-https://github.com/G-U-N/AnimateLCM/assets/60997859/2011e3f3-709c-4f9e-9d41-e3259f220673
-
-
-
-Use the diffusers to test the beta version AnimateLCM text-to-video models.
-
-```python
-import torch
-from diffusers import AnimateDiffPipeline, LCMScheduler, MotionAdapter
-from diffusers.utils import export_to_gif
-
-adapter = MotionAdapter.from_pretrained("wangfuyun/AnimateLCM", torch_dtype=torch.float16)
-pipe = AnimateDiffPipeline.from_pretrained("emilianJR/epiCRealism", motion_adapter=adapter, torch_dtype=torch.float16)
-pipe.scheduler = LCMScheduler.from_config(pipe.scheduler.config, beta_schedule="linear")
-
-pipe.load_lora_weights("wangfuyun/AnimateLCM", weight_name="AnimateLCM_sd15_t2v_lora.safetensors", adapter_name="lcm-lora")
-pipe.set_adapters(["lcm-lora"], [0.8])
-
-pipe.enable_vae_slicing()
-pipe.enable_model_cpu_offload()
-
-output = pipe(
-    prompt="A space rocket with trails of smoke behind it launching into space from the desert, 4k, high resolution",
-    negative_prompt="bad quality, worse quality, low resolution",
-    num_frames=16,
-    guidance_scale=2.0,
-    num_inference_steps=6,
-    generator=torch.Generator("cpu").manual_seed(0),
-)
-frames = output.frames[0]
-export_to_gif(frames, "animatelcm.gif")
+```
+@article{wang2024animatelcm,
+  title={AnimateLCM: Accelerating the Animation of Personalized Diffusion Models and Adapters with Decoupled Consistency Learning},
+  author={Wang, Fu-Yun and Huang, Zhaoyang and Shi, Xiaoyu and Bian, Weikang and Song, Guanglu and Liu, Yu and Li, Hongsheng},
+  journal={arXiv preprint arXiv:2402.00769},
+  year={2024}
+}
 
 ```
 
+> Planning to train a v2 version of AnimateLCM-T2V.
 
-🎉 Check the advanced developpment of community: [ComfyUI-AnimateLCM](https://github.com/dezi-ai/ComfyUI-AnimateLCM) and [ComfyUI-Reddit](https://www.reddit.com/r/comfyui/comments/1ajjp9v/animatelcm_support_just_dropped/).
+### Introduction
 
-🎉 Awesome Workflow for AnimateLCM: [Tutorial Video](https://youtu.be/HxlZHsd6xAk).
+Consistency models is a promising new family of generative models for fast yet high quality generation models, proposed by Professor [Yang Song](https://yang-song.net/). 
 
-More code and weights will be released.
+Animate-LCM is **a pioneer work** and exploratory on fast animation generation following the consistency models, being able to generate animations in good quality with 4 inference steps. 
 
-## Reference
-```bib
-@artical{wang2024animatelcm,
-      title={AnimateLCM: Accelerating the Animation of Personalized Diffusion Models and Adapters with Decoupled Consistency Learning}, 
-      author={Fu-Yun Wang and Zhaoyang Huang and Xiaoyu Shi and Weikang Bian and Guanglu Song and Yu Liu and Hongsheng Li},
-      year={2024},
-      eprint={2402.00769},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-}
-@article{wang2023gen,
-  title={Gen-L-Video: Multi-Text to Long Video Generation via Temporal Co-Denoising},
-  author={Wang, Fu-Yun and Chen, Wenshuo and Song, Guanglu and Ye, Han-Jia and Liu, Yu and Li, Hongsheng},
-  journal={arXiv preprint arXiv:2305.18264},
-  year={2023}
-}
-```
+It replies on the **decoupled** learning paradigm, firstly learnining image generation prior and then learning the temporal generation prior for fast sampling, greatly boosting the training efficiency.
+
+
+### Demos
+
+We have launched lots of demo videos generated by Animate-LCM on the [Project Page](https://animatelcm.github.io/). Generally speaking, AnimateLCM works for fast, text-to-video, control-to-video, image-to-video, video-to-video stylization, longer video generation. 
+
+
+<div align="center">
+  <img src="__assets__/imgs/examples.png" alt="comparison" style="zoom:80%;" />
+</div>
+
+
+
+
+
+### Models 
+
+Currently, We release three models for usage
+
+- [Animate-LCM-T2V](https://huggingface.co/wangfuyun/AnimateLCM): A spatial LoRA weight and a motion module for personalized video generation. Some trying from the commnunity points out that the motion module is also compatible with many personalized models tuned for LCM, for example [Dreamshaper-LCM](https://civitai.com/models/4384?modelVersionId=252914).  
+
+- [AnimateLCM-SVD-xt](https://huggingface.co/wangfuyun/AnimateLCM-SVD-xt). I provide AnimateLCM-SVD-xt and AnimateLCM-SVD-xt 1.1, which are tuned from [SVD-xt](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt) and [SVD-xt 1.1](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt-1-1) respectively. They work for high-resolution image animation with 25 frames with 1~8 steps. You can try it with the Hugging Face [Demo](https://huggingface.co/spaces/wangfuyun/AnimateLCM-SVD). Thanks for Hugging Face team for providing the GPU grants. 
+
+- [AnimateLCM-I2V](https://huggingface.co/wangfuyun/AnimateLCM-I2V). A spatial LoRA weight and a motion module with an additional image encoder for personalized image animation. It is our trying to directly train a image animation models for fast sampling without any teacher models. It can generate animations with a personalized image with 2~4 steps. Yet due to the training resources is very limited, it is not that stable as I would expect (Similar to most I2V models built on Stable-Diffusion-v1-5, not very stable for generation).
+
+ 
+### Usage Tips
+
+- **AnimateLCM-T2V**: 
+    - 4 steps can generally work good. For better quality, apply 6~8 inference steps to improve the generation quality.
+    - CFG scale should be set between 1~2. Set CFG=1 can reduce the sampling cost by half. However, generally say, I would prefer using CFG 1.5 and set proper negative prompts for sampling to achieve better quality.
+    - Set the video length to 16 frames for sampling. This is the length that the model trained with.   
+    - The models should work with IP-Adapter, ControlNet, and lots of adapters tuned for Stable Diffusion in a zero-shot manner. If you hope for better results of combination, you can try to tune them together applying the teacher-free adaptation script I provide. It will not corrupt the sampling speed. 
+
+- **AnimateLCM-I2V**:
+    - 2-4 steps should work for personalized image animation. 
+    - In most cases, the model does not need CFG values. Just set the CFG=1 to reduce inference cost.
+    - I additionally set a `motion scale` hyper-parameter. Set it to 0.8 as the default choice. If you set it to 0.0, you should always obtain static animations. You can increase the motion scale for larger motions, but that will sometimes cause the generation failure.
+
+    - The typically workflow can be:
+        - Using your personalized image models to generation a image with good quality.
+        - Applying the generated image as input and resuing the same prompt for image animation.
+        - You can even further applying AnimateLCM-T2V to refine the final motion quality.
+
+- **AnimateLCM-SVD**: 
+    - 1-4 steps should work.
+    - SVD requires two CFG values. `CFG_min` and `CFG_max`. By default, `CFG_min` is set to 1. Slightly adjusting `CFG_max` between [1, 1.5] will obtain good results.  Again, just setting it to 1 to reduce the inference cost.
+
+### Related Notes
+
+- Tutorial video of AnimateLCM on ComfyUI: [Tutorial Video](https://www.youtube.com/watch?v=HxlZHsd6xAk&feature=youtu.be)
+- ComfyUI for AnimateLCM: [AnimateLCM-ComfyUI](https://github.com/dezi-ai/ComfyUI-AnimateLCM) & [ComfyUI-Reddit](https://www.reddit.com/r/comfyui/comments/1ajjp9v/animatelcm_support_just_dropped/) 
+
+
+### Comparison
+
+<div align="center">
+  <img src="__assets__/imgs/comparison.png" alt="comparison" style="zoom:80%;" />
+</div>
+
+
+### Contact & Collaboration
+
+I am open for collaboration, but not for full-time intern. If you find some of my work be interesting and hope for collaboration/discussion in any formats, please do not hesitate to contact me.
+
+Email: fywang@link.cuhk.edu.hk
+
+### Acknowledge
+
+I would thank **[AK](https://twitter.com/_akhaliq)** for broadcasting our work and huggingface team for providing help for building the gradio demo and store the models. Would thank the [Dhruv Nair](https://twitter.com/_DhruvNair_) for providing help in diffusers.
+
+
+
+
