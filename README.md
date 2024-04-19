@@ -81,6 +81,7 @@ We split the animatelcm_sd15 and animatelcm_svd into two folders. They are based
 - **AnimateLCM-SVD**: 
     - 1-4 steps should work.
     - SVD requires two CFG values. `CFG_min` and `CFG_max`. By default, `CFG_min` is set to 1. Slightly adjusting `CFG_max` between [1, 1.5] will obtain good results.  Again, just setting it to 1 to reduce the inference cost.
+    - For other hyper-parameters of AnimateLCM-SVD-xt, please just follow the original SVD design.
 
 ### Related Notes
 
