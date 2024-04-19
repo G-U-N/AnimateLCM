@@ -1,0 +1,10 @@
+accelerate
+diffusers==0.25.1
+gradio==4.19.2
+numpy==1.26.4
+Pillow==10.2.0
+torch==2.2.0
+transformers==4.37.0
+spaces==0.23.2
+opencv-python
+xformers
