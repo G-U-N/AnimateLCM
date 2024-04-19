@@ -1,1 +1,2 @@
-Local usage instruction for animatelcm_sd15
+##  AnimateLCM SD15
+
