@@ -52,7 +52,7 @@ class AnimateController:
         self.savedir = os.path.join(
             self.basedir, "samples", datetime.now().strftime("Gradio-%Y-%m-%dT%H-%M-%S"))
         self.savedir_sample = os.path.join(self.savedir, "sample")
-        self.lcm_lora_path = "models/LCM_LoRA/sd15_t2v_beta_lora.safetensors"
+        self.lcm_lora_path = "models/LCM_LoRA/AnimateLCM_sd15_t2v_lora.safetensors"
         os.makedirs(self.savedir, exist_ok=True)
 
         self.stable_diffusion_list = []
@@ -224,7 +224,7 @@ class AnimateController:
 controller = AnimateController()
 
 controller.update_stable_diffusion("stable-diffusion-v1-5")
-controller.update_motion_module("sd15_t2v_beta_motion.ckpt")
+controller.update_motion_module("AnimateLCM_sd15_t2v.ckpt")
 controller.update_base_model("realistic2.safetensors")
 
 
