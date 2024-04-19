@@ -44,3 +44,9 @@ python app.py
 
 python app-i2v.py
 ```
+
+### Batch Inference
+
+```
+python batch_inference.py --config=./configs/batch_inference_example.yaml
+```

@@ -1,0 +1,67 @@
+T2V-Example:
+  inference_config: "configs/inference/inference-t2v.yaml"
+  motion_module:
+    - "models/Motion_Module/xxx.ckpt"
+  lcm_lora:
+    - "models/LCM_LoRA/xxx.safetensors"
+
+  dreambooth_path: "models/Personalized/xxx.safetensors"
+  lora_model_path: ""
+
+  seed:           [2, 0, 2 , 4]
+  steps:          1
+  guidance_scale: 1.5
+  do_classifier_free_guidance: True
+  H: 512
+  W: 512
+  L: 16
+
+  prompt:
+    - "xxx, specify your prompt here"
+    - "xxx, specify your prompt here"
+    - "xxx, specify your prompt here"
+    - "xxx, specify your prompt here"
+
+  n_prompt:
+    - "xxx, specify your negative prompt here"
+    - "xxx, specify your negative prompt here"
+    - "xxx, specify your negative prompt here"
+    - "xxx, specify your negative prompt here"
+
+I2V-Example:
+
+  inference_config: "configs/inference/inference-i2v.yaml"
+  motion_module:
+    - "models/Motion_Module/xxx.ckpt"
+  lcm_lora:
+    - "models/LCM_LoRA/xxx.safetensors"
+
+  dreambooth_path: "models/Personalized/xxx.safetensors"
+  lora_model_path: ""
+
+  seed:           [2, 0, 2, 4]
+  steps:          1
+  guidance_scale: 1 # should be  [1,2]
+  do_classifier_free_guidance: True
+  H: 512
+  W: 512
+  L: 16
+
+  prompt:
+    - "xxx, specify your prompt here"
+    - "xxx, specify your prompt here"
+    - "xxx, specify your prompt here"
+    - "xxx, specify your prompt here"
+
+  n_prompt:
+    - "xxx, specify your negative prompt here"
+    - "xxx, specify your negative prompt here"
+    - "xxx, specify your negative prompt here"
+    - "xxx, specify your negative prompt here"
+
+  image_paths:
+    - "xxx, specify your image paths here"
+    - "xxx, specify your image paths here"
+    - "xxx, specify your image paths here"
+    - "xxx, specify your image paths here"
+ 
