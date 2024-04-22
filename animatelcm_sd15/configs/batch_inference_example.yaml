@@ -9,7 +9,7 @@ T2V-Example:
   lora_model_path: ""
 
   seed:           [2, 0, 2 , 4]
-  steps:          1
+  steps:          4
   guidance_scale: 1.5
   do_classifier_free_guidance: True
   H: 512
@@ -40,7 +40,7 @@ I2V-Example:
   lora_model_path: ""
 
   seed:           [2, 0, 2, 4]
-  steps:          1
+  steps:          4
   guidance_scale: 1 # should be  [1,2]
   do_classifier_free_guidance: True
   H: 512
