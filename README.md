@@ -32,6 +32,13 @@ Animate-LCM is **a pioneer work** and exploratory on fast animation generation f
 
 It replies on the **decoupled** learning paradigm, firstly learnining image generation prior and then learning the temporal generation prior for fast sampling, greatly boosting the training efficiency.
 
+The High-level workflow of AnimateLCM can be
+
+
+<div align="center">
+  <img src="__assets__/imgs/demo_figure.png" alt="comparison" style="zoom:80%;" />
+</div>
+
 
 ### Demos
 
