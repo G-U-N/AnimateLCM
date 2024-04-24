@@ -22,9 +22,8 @@ If you use any components of our work, please cite it.
 
 ```
 
-> Planning to release a v2 version of AnimateLCM-T2V. Here is a live recording of usage. 
+Here is a live recording of usage. Prompt:"river reflecting mountain"
 
-Prompt:"river reflecting mountain"
 ![case1x2](https://github.com/G-U-N/AnimateLCM/assets/60997859/98f6cefe-b5f8-4bcc-966e-bbca93638e8d)
 
 ### Introduction
