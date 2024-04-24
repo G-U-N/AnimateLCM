@@ -22,7 +22,10 @@ If you use any components of our work, please cite it.
 
 ```
 
-> Planning to train a v2 version of AnimateLCM-T2V.
+> Planning to train a v2 version of AnimateLCM-T2V. Here is a live recording of usage.
+
+
+![case1x2](https://github.com/G-U-N/AnimateLCM/assets/60997859/98f6cefe-b5f8-4bcc-966e-bbca93638e8d)
 
 ### Introduction
 
