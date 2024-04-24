@@ -100,7 +100,9 @@ We split the animatelcm_sd15 and animatelcm_svd into two folders. They are based
 
 
 ### Comparison
-> Live recording of AnimateLCM-T2V. Prompt: "dog with sunglasses".
+
+Live recording of AnimateLCM-T2V. Prompt: "dog with sunglasses".
+
 ![case2x2](https://github.com/G-U-N/AnimateLCM/assets/60997859/b23f3946-f3e2-4800-8662-dff9457a60ac)
 
 
