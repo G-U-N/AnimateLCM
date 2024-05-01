@@ -26,6 +26,13 @@ Here is a screen recording of usage. Prompt:"river reflecting mountain"
 
 ![case1x2](https://github.com/G-U-N/AnimateLCM/assets/60997859/98f6cefe-b5f8-4bcc-966e-bbca93638e8d)
 
+### News
+
+- [2024.05]: 🔥🔥🔥 We release the training script for accelerating Stable Video Diffusion.
+- [2024.03]: 😆😆😆 We release the AnimateLCM-I2V and AnimateLCM-SVD for fast image animation.
+- [2024.02]: 🤗🤗🤗 Release pretrained model weights and Huggingface Demo.
+- [2024.02]: 💡💡💡 Technical report is available on arXiv.
+
 ### Introduction
 
 Consistency model is a promising new family of generative models for fast yet high-quality generation, proposed by Professor [Yang Song](https://yang-song.net/). 
