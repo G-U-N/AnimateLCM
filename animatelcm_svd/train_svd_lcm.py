@@ -654,7 +654,7 @@ def main():
             ).repo_id
 
 
-    noise_scheduler = CMStochasticIterativeScheduler(
+    noise_scheduler = AnimateLCMSVDStochasticIterativeScheduler(
         num_train_timesteps= args.N,
         sigma_min = 0.002,
         sigma_max = 700.0,
