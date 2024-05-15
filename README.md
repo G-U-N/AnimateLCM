@@ -2,7 +2,7 @@
 
 ## ⚡️AnimateLCM: Accelerating the Animation of Your Personalized Models and Adapters through Decoupled Consistency Learning
 
-[[Paper]](https://arxiv.org/abs/2402.00769) [[Project Page ✨]](https://animatelcm.github.io/) [[Demo in 🤗Hugging Face]](https://huggingface.co/spaces/wangfuyun/AnimateLCM-SVD) [[Pre-trained Models]](https://huggingface.co/wangfuyun/AnimateLCM) [[Civitai]](https://civitai.com/models/290375/animatelcm-fast-video-generation)  ![visitors](https://visitor-badge.laobi.icu/badge?page_id=g-u-n.animatelcm)
+[[Paper]](https://arxiv.org/abs/2402.00769) [[Project Page ✨]](https://animatelcm.github.io/) [[Demo in 🤗Hugging Face]](https://huggingface.co/spaces/wangfuyun/AnimateLCM-SVD) [[Pre-trained Models]](https://huggingface.co/wangfuyun/AnimateLCM) [[Civitai]](https://civitai.com/models/290375/animatelcm-fast-video-generation)  ![visitors](https://visitor-badge.laobi.icu/badge?page_id=G-U-N.AnimateLCM)
 
 
 by *[Fu-Yun Wang](https://g-u-n.github.io), Zhaoyang Huang📮, Xiaoyu Shi, Weikang Bian, Guanglu Song, Yu Liu, Hongsheng Li📮* 
