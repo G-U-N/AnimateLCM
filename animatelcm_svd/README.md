@@ -12,7 +12,7 @@ or through the requirements.txt
 ```
 conda create -n animatelcm_svd python=3.9
 conda activate animatelcm_svd
-pip install -r requirements
+pip install -r requirements.txt
 ```
 
 ### Models
