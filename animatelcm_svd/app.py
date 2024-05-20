@@ -1,4 +1,4 @@
-import spaces
+# import spaces
 
 import gradio as gr
 # import gradio.helpers
@@ -62,7 +62,7 @@ model_select("AnimateLCM-SVD-xt-1.1.safetensors")
 
 max_64_bit_int = 2**63 - 1
 
-@spaces.GPU
+# @spaces.GPU
 def sample(
     image: Image,
     seed: Optional[int] = 42,
