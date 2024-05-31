@@ -9,7 +9,9 @@ by *[Fu-Yun Wang](https://g-u-n.github.io), Zhaoyang Huang📮, Xiaoyu Shi, Weik
 
 </div>
 
-
+| Example 1       | Example 2       | Example 3       |
+|-----------------|-----------------|-----------------|
+| ![GIF 1](__assets__/gifs/dog.gif) | ![GIF 2](__assets__/gifs/girl.gif) | ![GIF 3](__assets__/gifs/swan.gif) |
 
 If you use any components of our work, please cite it.
 
