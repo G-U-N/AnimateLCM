@@ -45,7 +45,7 @@ class SVDSolver():
         self.sigmas = self.sigmas[:,None,None,None,None]
         self.timesteps = torch.Tensor([0.25 * (sigma + 1e-44).log() for sigma in self.sigmas])
 
-        self.weights = (1/(self.sigmas[:-1] - self.sigmas[1:]))**0.1
+        self.weights = (1/(self.sigmas[:-1] - self.sigmas[1:]))**0.1 # This is not optimal and can influence the training dynamics a lot. Wish someone can make it better.
         self.c_out = -self.sigmas / ((self.sigmas**2 + 1)**0.5)
         self.c_skip = 1 / (self.sigmas**2 + 1)
         self.c_in = 1 /((self.sigmas**2 + 1) ** 0.5)
