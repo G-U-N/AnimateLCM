@@ -1,6 +1,6 @@
 <div align="center">
 
-## ⚡️AnimateLCM: Accelerating the Animation of Your Personalized Models and Adapters through Decoupled Consistency Learning
+## ⚡️AnimateLCM:  Computation-Efficient Personalized Style Video Generation without Personalized Video Data
 
 [[Paper]](https://arxiv.org/abs/2402.00769) [[Project Page ✨]](https://animatelcm.github.io/) [[Demo in 🤗Hugging Face]](https://huggingface.co/spaces/wangfuyun/AnimateLCM-SVD) [[Pre-trained Models]](https://huggingface.co/wangfuyun/AnimateLCM) [[Civitai]](https://civitai.com/models/290375/animatelcm-fast-video-generation)  ![visitors](https://visitor-badge.laobi.icu/badge?page_id=G-U-N.AnimateLCM)
 
