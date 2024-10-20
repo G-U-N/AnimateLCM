@@ -39,7 +39,6 @@ Here is a screen recording of usage. Prompt:"river reflecting mountain"
 
 ### Introduction
 
-Consistency model is a promising new family of generative models for fast yet high-quality generation, proposed by Professor [Yang Song](https://yang-song.net/). 
 
 Animate-LCM is **a pioneer work** and exploratory on fast animation generation following the consistency models, being able to generate animations in good quality with 4 inference steps. 
 
